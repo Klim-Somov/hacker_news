@@ -8,12 +8,10 @@ export const getStory = async (storyId) => {
   const result = await axios
     .get(`${storyUrl + storyId}.json`)
     .then((data) => data.data);
-
   return result;
 };
 
 export const getStoriesIds = async () => {
   const result = await axios.get(newStoriesUrl).then((data) => data.data);
-
   return result;
 };
